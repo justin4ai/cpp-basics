@@ -20,8 +20,8 @@ class Marine {
 Marine::Marine() : hp(50), coord_x(0), coord_y(0), damage(5), is_dead(false) {} // initializer list (변수 초기화)
 
 Marine::Marine(int x, int y)
-    : coord_x(x), coord_y(y), hp(50), damage(5), is_dead(false) {}  // initializer list (변수 초기화)
-
+    : coord_x(x), coord_y(y), hp(50), damage(5), is_dead(false) {}  // initializer list (변수 초기화) : coord_x ( coord_x ) 이런 식으로 써도 됨 (안쪽이 무조건 argument), intiializer list를 안쓰면 오류남
+//상수와 레퍼런스들은 모두 생성과 동시에 초기화가 되어야 함 <- 무조건 초기화 리스트를 써야함
 void Marine::move(int x, int y) {
   coord_x = x;
   coord_y = y;

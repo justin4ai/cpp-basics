@@ -24,7 +24,7 @@ class Marine {
 
   ~Marine() { total_marine_num--; }
 };
-int Marine::total_marine_num = 0; // 다른 멤버 변수들과 같이 
+int Marine::total_marine_num = 0; // 다른 멤버 변수들과 같이 초기화를 class Marine { .. static int total_marine_num = 0; 이렇게 할 수 없음. const static int x = 0; 이런 식으로는 할 수 잇음
 
 Marine::Marine()
     : hp(50), coord_x(0), coord_y(0), default_damage(5), is_dead(false) {

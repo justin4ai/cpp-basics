@@ -1,4 +1,4 @@
-// 상수 멤버 함수
+// 상수 멤버 함수 (읽기만 실행하는 함수)
 #include <iostream>
 
 class Marine {

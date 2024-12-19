@@ -5,7 +5,7 @@ class Marine {
   int coord_x, coord_y;  // 마린 위치
   bool is_dead;
 
-  const int default_damage;  // 기본 공격력
+  const int default_damage;  // 기본 공격력 (const -> 절대 안바뀜)
 
  public:
   Marine();              // 기본 생성자

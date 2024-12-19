@@ -61,7 +61,12 @@ Marine& Marine::be_attacked(int damage_earn) {
   hp -= damage_earn;
   if (hp <= 0) is_dead = true;
 
-  return *this;
+// 사실은 다음과 같음
+//   this->hp -= damage_earn;
+//   if (this->hp <= 0) this->is_dead = true;
+
+
+  return *this; // this: 자기 자신을 가르키는 포인터
 }
 void Marine::show_status() {
   std::cout << " *** Marine *** " << std::endl;

@@ -8,7 +8,7 @@ class MyString {
 
  public:
   // capacity 만큼 미리 할당함. (explicit 키워드에 주목)
-  explicit MyString(int capacity); // explicit하게 하면, 자동으로 resolve해서 이것을 쓰지 못하도록 함.
+  explicit MyString(int capacity); // explicit하게 하면, 자동으로 resolve해서 이것을 쓰지 못하도록 함. (=explicit하게 받기로 한 타입의 변수만 받기)
 
   // 문자열로 부터 생성
   MyString(const char* str);

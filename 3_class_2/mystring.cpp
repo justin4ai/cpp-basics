@@ -62,7 +62,7 @@ MyString::MyString(const char* str) { // 변화시킬게 아니라면 const로 �
   }
 }
 
-MyString::MyString(const MyString& str) {  // 변화시킬게 아니라면 const로 받는 것이 좋다
+MyString::MyString(const MyString& str) {  // 변화시킬게 아니라면 const로 받는 것이 좋다 + &(참조자)로 받아야 full copy를 안해오기 때문에 효율적
   string_length = str.string_length;
   memory_capacity = str.string_length;
   string_content = new char[string_length];
@@ -72,7 +72,7 @@ MyString::MyString(const MyString& str) {  // 변화시킬게 아니라면 const
   }
 }
 
-MyString::~MyString() { delete[] string_content; }
+MyString::~MyString() { delete[] string_content; } // 동적으로 할당되기 때문에 이러헥 지울 수 있음
 int MyString::length() const { return string_length; }
 
 void MyString::print() const {
